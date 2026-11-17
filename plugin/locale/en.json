@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH identity verification",
+    "description": "Experimental: a standard install provides a synthetic demo; real macOS self-checks require the isolated Desktop adapter."
+  }
+}

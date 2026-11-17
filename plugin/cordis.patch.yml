@@ -1,0 +1,3 @@
+- insert:
+    - id: touch-id-simulation
+      name: 'dsh-touch-id'

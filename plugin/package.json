@@ -1,0 +1,50 @@
+{
+  "name": "dsh-touch-id",
+  "version": "0.1.0-m3.1",
+  "private": false,
+  "license": "MIT",
+  "author": "shaoqing404",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaoqing404/dsh-identity-verification.git",
+    "directory": "plugin"
+  },
+  "homepage": "https://github.com/shaoqing404/dsh-identity-verification#readme",
+  "bugs": {
+    "url": "https://github.com/shaoqing404/dsh-identity-verification/issues"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "macos", "localauthentication"],
+  "engines": {
+    "dsh": "0.2.2-rc.3"
+  },
+  "description": "实验项目：普通安装提供合成演示，macOS 真实身份验证自检需独立桌面适配层。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}
