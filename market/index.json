@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DSH identity verification experiments",
+    "zh": "DSH 身份验证实验"
+  },
+  "description": {
+    "en": "Unofficial experimental source. Standard installation provides a synthetic demo.",
+    "zh": "非官方实验项目，普通安装仅提供合成演示。"
+  },
+  "metadata": {
+    "categories": {
+      "privacy": {
+        "title": {
+          "en": "Privacy",
+          "zh": "隐私"
+        }
+      }
+    },
+    "labels": {
+      "experimental": {
+        "title": {
+          "en": "Experimental",
+          "zh": "实验版"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-touch-id",
+      "title": {
+        "en": "DSH identity verification (experimental)",
+        "zh": "DSH 身份验证（实验版）"
+      },
+      "description": {
+        "en": "Synthetic demo by default. Real macOS self-checks require the isolated Desktop adapter. No session encryption yet.",
+        "zh": "普通安装提供合成演示，真实 macOS 自检需独立桌面适配层。尚无会话加密。"
+      },
+      "author": "shaoqing404",
+      "homepage": "https://github.com/shaoqing404/dsh-identity-verification#readme",
+      "repository": {
+        "url": "https://github.com/shaoqing404/dsh-identity-verification",
+        "directory": "plugin"
+      },
+      "metadata": {
+        "category": "privacy",
+        "labels": [
+          "experimental"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-m3.1",
+          "publishTimestamp": 1794914797,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/shaoqing404/dsh-identity-verification",
+            "commit": "d6246fd0d41a452884d91c1f65bae372361024b4",
+            "path": "plugin"
+          },
+          "engines": {
+            "dsh": "0.2.2-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}

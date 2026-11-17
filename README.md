@@ -33,6 +33,14 @@ cd dsh-identity-verification
 
 真实认证的实验组件与准备缺口见[原生实验说明](docs/native-lab.md)。不要用自己的业务会话做迁移或加密测试。
 
+也可在独立测试 profile 启用 DSH 实验性的「自定义插件索引」，在「发现 → 添加索引源」输入：
+
+```text
+https://raw.githubusercontent.com/shaoqing404/dsh-identity-verification/main/market/index.json
+```
+
+这是本项目自建索引，不是官方收录目录。索引固定源码提交并声明精确兼容版本，卡片安装仍只提供合成演示。索引格式已用 DSH `0.2.2-rc.3` 的官方解析器校验，发现页的实际安装体验仍待单独验收。
+
 ## 开发验证
 
 Node.js 24.9+，无需安装 npm 依赖即可运行纯逻辑测试：
@@ -47,7 +55,7 @@ node --test plugin/test/*.test.js scripts/test/native-auth-channel.test.mjs nati
 
 | 路径 | 用途 |
 | --- | --- |
-| `plugin/` | 官方 bundle、中文配置页、合成核心和私有通道核心 |
+| `plugin/` | 遵循 DSH bundle 规范的插件、中文配置页、合成核心和私有通道核心 |
 | `native/` | 独立 LocalAuthentication helper 和纯逻辑测试 |
 | `scripts/` | 实验适配、来源检查、进程生命周期与隔离启动源码 |
 | `docs/` | 边界、验证记录与后续设计 |
